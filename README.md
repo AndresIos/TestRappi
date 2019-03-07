@@ -16,11 +16,11 @@ MovieViewModel:encargado de manejar las respuestas de los servicios referentes a
 SearchViewModel:contiene los atributos para una busqueda,offline y online
 4)Managers
 SessionManager: define el manager para las peticiones a los endpoints
-5)Adapter
-CacheAdapter:Adaptador que basado en la conexion a internet(si existe o no) trae los datos en el cache.
 MovieManager: Contiene todos los metodos a endpoints acerca de la pelicula (lista,detalle,buscador)
 NetworkManager:Contiene un listener que valida la conexion actual a internet del dispositivo
 CategoryManager:Manager para la vista CategoryView
+5)Adapter
+CacheAdapter:Adaptador que basado en la conexion a internet(si existe o no) trae los datos en el cache.
 --------
 Preguntas
 1) El principio de responsabilidad unica es el primer y mas importante principio de SOLID , el cual define una serie de principios
