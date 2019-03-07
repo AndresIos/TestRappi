@@ -126,8 +126,11 @@ extension HomeViewController
                     
                     if self.movieViewModel.movies.value.count  >= 20
                     {
-                           self.page += 1
+                        if self.movieViewModel.canLoad
+                        {
+                        self.page += 1
                         self.getMovieList(page: self.page, category: self.movieCategory)
+                        }
                     }
                 }
             })

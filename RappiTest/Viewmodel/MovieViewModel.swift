@@ -20,6 +20,7 @@ public class MovieViewModel {
     var cast = BehaviorRelay<String?>(value:"")
     var director = BehaviorRelay<String?>(value:"")
     var videos = BehaviorRelay<[VideoResults]>(value: [])
+    var canLoad = false
     var movieManager = MovieManager()
     var disposeBag = DisposeBag()
 
@@ -28,7 +29,7 @@ public class MovieViewModel {
     {
         movieManager.getMovieList(page: page, category: category).subscribe(onNext: { data in
           
-            
+            self.canLoad = !data.isEmpty
             DispatchQueue.main.async() {
                 self.tempMovies.accept(data.map{ s1 -> Movie in
                     let movie = Movie()
